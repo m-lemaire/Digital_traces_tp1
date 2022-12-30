@@ -45,6 +45,7 @@ def print():
     <input type="text" id="message" placeholder="Enter a message">
     <button onclick="myFunction()">Print</button>""" + script
 
+<<<<<<< HEAD
 @app.route('/cookies/', methods = ["GET"])
 def req():
     #req = requests.get("https://www.google.com/")
@@ -56,3 +57,9 @@ def req():
 if __name__ == '__main__':
 
     app.run(debug=True)
+=======
+
+if __name__ == '__main__':
+
+    app.run(debug=True)
+>>>>>>> 90b73ba45e942f586a673100cc40dee94e9b04f6
