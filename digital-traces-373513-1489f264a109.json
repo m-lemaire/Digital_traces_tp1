@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "digital-traces-373513",
+  "private_key_id": "1489f264a109680d7efb658be08be157ba2dce7e",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCHbiNNuoTMhJa7\nvQGAu8eU7s3VXJlolT7ZUgcftc7OlP8ChJgGGnh3gwzZQ5M9ZAV64PYGahnRkRYQ\nxBbaGtDOYx5GVy4+JheColZACMI4aZpsG96PDqChmQHf+SFQfDvNK2QrrepF8lbd\nzLFsn6nxifNruPW04DjBlawuWqeVMbKPtyPHfsBsiNkrw3mq2XDhsvonH8Yro8Uv\nygHNFblH3AAqncJ18SSi8Gmp+z6wodAWbigszEUPEi6z1xGtLJsOPRvGqTVYTgrq\nMQqNAUqZ147iugOOs2GMQZUyqivEG0IausC8NCmMxDJzz4EVXgbZOtdP7OLdl/II\nJfVTsvflAgMBAAECggEAA1P7DR1wxv/ZHmryHwI+UNQffcdFQ9MrFLcV0rsqhlwV\n+i9c9wVugW1YgvxMoX0UP2VI1naEBOjeVHIlJ53yFKhN5aedzMwt1rl7ih5M+4ro\nzxBOQ1C2NNJoP+NE5M/wvkV7NDGVaLugU9oEYCl6SSO9Nh/49cVuz58IeKkkph9l\n3w29Nso6jHDNaNIrALjW4+/yRWCIQbOlT/wkeGlzHyV5M34IpWxcAcvMOCyphqf6\nduNy/4BI6WJcugXHQoCD4eXL7t1jwn/3+2ljsrUDJoFSr/XC7esmSOODuUfSZzXv\nC7BRFb4hrDaccwcq0km0iu0j1PynZgYa0gHNsFk+0QKBgQC+hXuYowapVRWR9zWD\ncrc3Df4+FrTC6B4tBTrEhEq0FRkha4/GnWFBA+zCp1948Zn8i69/aM8O4Q61zEYM\nflWGddeRo645JRwnEZ1uRP7KKG0P6ufytgWnPRjD/ccbG9aK5JCTRPTKY8hPfodK\nrVyGeMB551KgHCH4LgnHAstz7QKBgQC1+Zqi+zqZfSB8Rvsxcrv/ryv/phtu/9Je\nSQHGYEB77Hy3AzWzcqt6r1agGZi4bDaetcGeM+3i3AccVJwui/H2aEii6IMw/b/D\nClm7lJfxnhZMN0CjS+joKYTBgJ9mVHHRlDWokYU/J6rK7vwYm+aqKV7TBDk8XoJ6\nltoGE2YE2QKBgQCtu6czTyZZ736V9mnUDh3IlHgNQkNfoK8zupsWbNR6VurtsNoQ\n8Z6n3N5fuqSy8w3KX86PTpHSLaRuX3JZHjL7RCZpZmsPLSn47nUzArOcwTSC2WDd\n0OJi2LHmt1qC++WuDjNQOAdJL6iP5P+WN3QyI5bREwIjgsPvPnwoAAJrGQKBgAT+\nyA7nRJGIDMc8j5Ko6p43KccHwUMHxLeP23udkseUE0xWyzeU0z435/HXIgkV913d\n8WWtWT9b+Nn/PJZOgyLXc/780PUcUhJBi3sJti4Mv+HxtlWFNOyCj0FcjYOal9E/\n90UcUYMNTLPrYYIvbWKIZjD2sbeFhKFm2K9IAwnpAoGASZPgqVW4BYkVYL28t0Qi\nEPjqhavT3JPI0IYc301HDl+xyHScYmyVPsRd1Rqwp5252VPm5YHpOhKHuqkZ5/hX\nBP3CMW4qEYnAyNgTY9OSer4zBwVZG0aBmdL+w4wxUNtLP5qx/ngjDLha1AqtcDxZ\nZ9MbrVg73+JpQ2M3kXHK4YE=\n-----END PRIVATE KEY-----\n",
+  "client_email": "digital-traces-service@digital-traces-373513.iam.gserviceaccount.com",
+  "client_id": "107419800099418921456",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/digital-traces-service%40digital-traces-373513.iam.gserviceaccount.com"
+}

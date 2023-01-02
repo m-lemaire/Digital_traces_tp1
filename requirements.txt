@@ -1,2 +1,6 @@
 flask
 requests
+google-api-python-client
+oauth2client
+lxml
+pandas
