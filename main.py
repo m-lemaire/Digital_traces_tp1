@@ -119,7 +119,8 @@ def visitors():
 @app.route('/trends')
 def chart():
     trend_dict = get_trend_data()   
-    return render_template('index_chart.html', trend_data=trend_dict)
+    # return render_template('doc.html', trend_data=trend_dict)
+    return trend_dict
 
 def get_trend_data():
     pytrend = TrendReq()
