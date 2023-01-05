@@ -5,6 +5,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 import requests
 import lxml
 import pandas as pd
+from pytrends.request import TrendReq
 
 
 app = Flask(__name__)
@@ -48,6 +49,8 @@ def print():
     return """
     <input type="text" id="message" placeholder="Enter a message">
     <button onclick="myFunction()">Print</button>""" + script
+
+
 
 @app.route('/cookies/', methods = ["GET"])
 def req():
@@ -111,6 +114,22 @@ def visitors():
 
     # return render_template('visitors.html', visitors=str(visitors))
     return "nombre de visiteurs : "+visitors
+
+
+@app.route('/trends')
+def chart():
+    trend_dict = get_trend_data()   
+    return render_template('index_chart.html', trend_data=trend_dict)
+
+def get_trend_data():
+    pytrend = TrendReq()
+
+    kw_list = ['vacances', 'soleil']
+    pytrend.build_payload(kw_list)
+    trend_data = pytrend.interest_over_time()
+    trend_dict = trend_data.to_dict(orient='records')
+
+    return trend_dict
 
 if __name__ == '__main__':
 
