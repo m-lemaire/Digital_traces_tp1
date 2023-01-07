@@ -3,9 +3,12 @@ from flask import Flask, render_template
 from apiclient.discovery import build
 from oauth2client.service_account import ServiceAccountCredentials
 import requests
+import base64
 import lxml
 import pandas as pd
 from pytrends.request import TrendReq
+from io import BytesIO
+import matplotlib.pyplot as plt
 
 
 app = Flask(__name__)
@@ -116,21 +119,41 @@ def visitors():
     return "nombre de visiteurs : "+visitors
 
 
-@app.route('/trends')
-def chart():
-    trend_dict = get_trend_data()   
-    # return render_template('doc.html', trend_data=trend_dict)
-    return trend_dict
 
-def get_trend_data():
-    pytrend = TrendReq()
+@app.route('/trends', methods=["GET"])
+def trends():
 
-    kw_list = ['vacances', 'soleil']
-    pytrend.build_payload(kw_list)
-    trend_data = pytrend.interest_over_time()
-    trend_dict = trend_data.to_dict(orient='records')
+    pytrends = TrendReq(hl='fr-FR', tz=360)
+    kw_list = ["vacances"]
+    pytrends.build_payload(kw_list, cat=0, timeframe='today 3-m', geo='FR', gprop='')
+    data = pytrends.interest_over_time()
+    # return the data in a table format
+    return data.to_html()
 
-    return trend_dict
+
+@app.route('/chart', methods = ["GET", "POST"])
+def chartpytrend():
+    pytrends = TrendReq()
+    kw_list = ['vacances']
+    pytrends.build_payload(kw_list=kw_list, timeframe='today 3-m', geo='FR', gprop='')
+    trend_data = pytrends.interest_over_time()
+
+    # Create a line chart
+    plt.plot(trend_data['vacances'])
+    plt.xlabel('Date')
+    plt.ylabel('Trend')
+
+    # Save the chart to a PNG file
+    buf = BytesIO()
+    plt.savefig(buf, format='png')
+    buf.seek(0)
+
+    # Encode the chart in base64
+    chart = base64.b64encode(buf.getvalue()).decode()
+    plt.clf()
+
+    # return the chart 
+    return '<img src="data:image/png;base64,{}">'.format(chart)
 
 if __name__ == '__main__':
 
